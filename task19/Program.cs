@@ -5,12 +5,21 @@
 //12821 -> да
 //23432 -> да 
 
-Console.WriteLine("Введите число");
-int string = Convert.ToString(Console.ReadLine());
+Console.WriteLine("Введите пятизначное число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+string numberText = N.ToString();
 
-static bool IsPalindrome(string s)
+if (N >=10000 && N <100000)
+if (numberText[0] == numberText[4] && numberText[1] == numberText[3])
 {
-    for (int i = 0; i < s.Length / 2; ++i)
-        if (s[i] != s[s.Length - 1 - i]) return false;
-    return true;
+        Console.WriteLine($"число {N} является палиндромом: ");
 }
+else
+{
+    Console.WriteLine($"число {N} не является палиндромом: ");
+}
+else
+{
+    Console.WriteLine("Введите пятизначное число");
+}
+
